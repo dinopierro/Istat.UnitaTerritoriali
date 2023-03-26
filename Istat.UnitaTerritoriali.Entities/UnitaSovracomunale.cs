@@ -11,7 +11,6 @@ namespace Istat.UnitaTerritoriali.Entities
         public string? NomeEstero { get; set; }
         public string? Sigla { get; set; }
         public string? CodiceProvincia { get; set; }
-        
     }
     public static class UnitaSovracomunaleEx
     {

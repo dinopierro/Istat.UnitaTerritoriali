@@ -27,12 +27,19 @@ namespace Istat.UnitaTerritoriali.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public async Task<dynamic> GetRegioni(string id)
+        public async Task<Regione> GetRegioni(string id)
         {
             var regioni = await _service.GetRegioni();
             return regioni.First(r => r.Id.IsEquals(id));
         }
 
+        [HttpGet]
+        [Route("Like/{like}")]
+        public async Task<List<Regione>> GetRegioniLike(string like)
+        {
+            var items = await _service.GetRegioni(); ;
+            return items.Where(i => i.Nome.Contain(like) || i.NomeEstero.Contain(like)).ToList();
+        }
     }
 }
 

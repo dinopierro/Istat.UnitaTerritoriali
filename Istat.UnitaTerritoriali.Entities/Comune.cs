@@ -23,7 +23,6 @@ namespace Istat.UnitaTerritoriali.Entities
         public string? CodiceNUTS12021 { get; set; }
         public string? CodiceNUTS22021 { get; set; }
         public string? CodiceNUTS32021 { get; set; }
-        
     }
     public static class ComuneEx
     {
