@@ -1,0 +1,16 @@
+﻿[*.cs]
+
+# CS8604: Possibile argomento di riferimento Null.
+dotnet_diagnostic.CS8604.severity = none
+
+# CS8602: Dereferenziamento di un possibile riferimento Null.
+dotnet_diagnostic.CS8602.severity = none
+
+# CS8629: Il tipo valore nullable non può essere Null.
+dotnet_diagnostic.CS8629.severity = none
+
+# SYSLIB0001: Il tipo o il membro è obsoleto
+dotnet_diagnostic.SYSLIB0001.severity = none
+
+# CS8625: Non è possibile convertire il valore letterale Null in tipo riferimento che non ammette i valori Null.
+dotnet_diagnostic.CS8625.severity = none
