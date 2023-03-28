@@ -99,7 +99,7 @@ Di seguito sono indicate le strutture delle entità utilizzate come risposta all
     }
 
 ## Consumo API
-Di seguito sono elencati gli endpoint disponibili e il tipo di dato fornito in risposta. Si fa presente che l'API è attualmente pubblicata su **Azure** e disponibile al seguente indirizzo: [https://istat.azurewebsites.net](https://istat.azurewebsites.net "https://istat.azurewebsites.net")
+Di seguito sono elencati gli endpoint disponibili e il tipo di dato fornito in risposta. Si fa presente che l'API è attualmente pubblicata su **Azure** e disponibile al seguente indirizzo: [https://istat.azurewebsites.net](https://istat.azurewebsites.net "https://istat.azurewebsites.net"). Disponibile pagina swagger OpenAPI da utilizzare come documentazione API al seguente indirizzo [https://istat.azurewebsites.net/swagger/index.html](https://istat.azurewebsites.net/swagger/index.html "https://istat.azurewebsites.net/swagger/index.html")
 
 |  EndPoint | Tipo di dato  | Note |
 | ------------ | ------------ | -|
