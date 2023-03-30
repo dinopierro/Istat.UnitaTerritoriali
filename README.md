@@ -6,7 +6,7 @@ Sul sito [Istat][1] sono resi disponibili i link permanenti dell'elenco dei comu
 #### Modalità di elaborazione 
 Ad ogni richiesta ricevuta, verrà effettuata una interrogazione al file .csv sul sito Istat e recuperata la sola data di ultima modifica del file contenente i dati aggiornati. Nel caso la data di ultima modifica del file csv, differisca da quella utilizzata per l'ultimo aggiornamento dei dati del servizio, questi verranno aggiornati per restituire i risultati richiesti tramite API. 
 
-L'elaborazione dei dati è effettuata mediante la classe **UnitaTerritorialiService** che estende l'interfaccia **IUnitaTerritorialiService**. Quest'ultima, registrata nella WebApplication come servizio **Singleton** e integrata, mediante **Dependency Injection**, in tutti i controllers:
+L'elaborazione dei dati è effettuata mediante la classe **UnitaTerritorialiService** che estende l'interfaccia **IUnitaTerritorialiService**. Questa é registrata nella WebApplication come servizio **Singleton** e integrata, mediante **Dependency Injection**, in tutti i controllers:
 
 `builder.Services.AddSingleton<IUnitaTerritorialiService, UnitaTerritorialiService>();`
 
