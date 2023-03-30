@@ -19,16 +19,18 @@ namespace Istat.UnitaTerritoriali.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Comune>> GetComuni()
-        {
-            return await _service.GetComuni();
-        }
-
-        [HttpGet]
         [Route("RipartizioniGeografiche")]
         public async Task<List<RipartizioneGeografica>> GetRipartizioni()
         {
             return await _service.GetRipartizioniGeografiche();
+        }
+
+        [HttpGet]
+        [Route("RipartizioniGeografiche/{id}")]
+        public async Task<RipartizioneGeografica> GetRipartizioni(string id)
+        {
+            var items = await _service.GetRipartizioniGeografiche();
+            return items.Where(i => i.Id.IsEquals(id)).First();
         }
 
         [HttpGet]
@@ -39,7 +41,21 @@ namespace Istat.UnitaTerritoriali.Controllers
         }
 
         [HttpGet]
-        [Route("ById/{id}")]
+        [Route("Tipologie/{id}")]
+        public async Task<TipologiaComune> GetTipologie(string id)
+        {
+            var items =  await _service.GetTipologieComuni();
+            return items.Where(i => i.Id.IsEquals(id)).First();
+        }
+
+        [HttpGet]
+        public async Task<List<Comune>> GetComuni()
+        {
+            return await _service.GetComuni();
+        }
+
+        [HttpGet]
+        [Route("{id}")]
         public async Task<Comune> GetComuneById(string id)
         {
             var items = await GetComuni();
