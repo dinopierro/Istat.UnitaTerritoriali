@@ -18,12 +18,6 @@ namespace Istat.UnitaTerritoriali.Controllers
         }
 
         [HttpGet]
-        public async Task<List<UnitaSovracomunale>> GetUnitaSovracomunali()
-        {
-            return await _service.GetUnitaSovracomunali();
-        }
-
-        [HttpGet]
         [Route("Tipologie")]
         public async Task<List<TipologiaUnitaSovracomunale>> GetTipologieUnitaSovracomunali()
         {
@@ -31,7 +25,21 @@ namespace Istat.UnitaTerritoriali.Controllers
         }
 
         [HttpGet]
-        [Route("ById/{id}")]
+        [Route("Tipologie/{id}")]
+        public async Task<TipologiaUnitaSovracomunale> GetTipologieUnitaSovracomunali(string id)
+        {
+            var items = await _service.GetTipologieUnitaSovracomunali();
+            return items.Where(i => i.Id.IsEquals(id)).First();
+        }
+
+        [HttpGet]
+        public async Task<List<UnitaSovracomunale>> GetUnitaSovracomunali()
+        {
+            return await _service.GetUnitaSovracomunali();
+        }
+
+        [HttpGet]
+        [Route("{id}")]
         public async Task<UnitaSovracomunale> GetUnitaSovracomunaliById(string id)
         {
             var items = await GetUnitaSovracomunali();
